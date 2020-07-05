@@ -1,0 +1,38 @@
+<scrpt type="text/javascript" src="mraid.js"></script>
+<div id="JA_Creative">
+<!--Using javascript for security reasons so the end user wont be able to see it -->
+<script type="text/javascript">
+  var adConfig = {
+    clickurl :  {
+    expand: "{REPORT{U0}{EXPAND}}"
+  },
+    platform : null,
+    options  : {
+      attr:{fixAligment:true}
+    }
+  };
+
+  justAdTrackingMacros = {
+    LOGO: "{REPORT{U0}{INTERACTION}{LOGO}{}}",
+    REAL_WORLD: "{REPORT{U0}{INTERACTION}}",
+    LEARN_MORE: "{REPORT{U0}{INTERACTION}{LEARN_MORE}{}}",
+    GTracker: "{REPORT{U0}{INTERACTION}{GTracker}{}}",
+    OPEN_WEB: "{REPORT{U0}{CLICK}{OPEN_WEB}{}}",
+    OPEN_LOGO: "{REPORT{U0}{CLICK}{OPEN_LOGO}{}}",
+    GOpen: "{REPORT{U0}{CLICK}{GOpen}{}}",
+    CLOSE: "{REPORT{}{MINOR}{CLOSE}{}}",
+    METRO_SCA: "REPORT{U0}{MINOR}{SCA}{}}"
+  };
+
+  var combinedMediaUrl = "https://mediajustad-a.akamaihd.net/select/Mraid/359839";
+
+  function downloadScript(src,adData) {
+      var scp = document.createElement("script");
+      scp.src = src;
+      scp.onload = function() { launchAd(downloadScript,adData);};
+      document.getElementsByTagName("head")[0].appendChild(scp);
+  }
+  downloadScript(combinedMediaUrl,adConfig);
+</script>
+<img src="https://stats.justad.mobi/tracking/detailed/et.php?eventType=12&adId=359839&partner=ubimo&payload_campaign_identifier={CAMP_ID}&payload_device_identifier={UCDID}&payload_timestamp={TIMESTAMP}" style="visibility:hidden; display:none;">
+</div>
