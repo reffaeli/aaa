@@ -1,0 +1,47 @@
+Scripting Answer Exam
+1)2)Please create 2 files in your desktop>new.bat new.text >open cmd>run in cmd  new.bat new.text
+bat file include this script :
+@echo off 
+if "%~z1" == "" ( 
+    echo File doesnt existtttt
+) else if "%~z1" == "0" ( 
+    echo File is empty
+) else ( 
+    echo File is not empty
+)
+
+3)
+Option 1)
+create  Freesstyle job in jenkins >Below Build section choose Execute Windows batch command>in the command enter new.bat path >add post -build action step with email notification 
+Option 2)
+plese create bat file with this script new3.bat >you should get failure alert because new3.bat doesnt have permission to call new.bat 
+
+@echo off
+
+call new.bat
+ECHO.%ERRORLEVEL%
+
+
+IF %ERRORLEVEL% NEQ 0 GOTO :failure
+else
+GOTO SUCCESS
+
+
+:success
+echo success 
+GOTO END
+
+:failure
+echo failure
+GOTO END
+
+:END
+ECHO THIS IS THE END
+
+
+4)
+in order to create log i use system log jenkins tool or blue ocean tool 
+
+
+5)in order to schedule the batch script in the job you can use Build Triggers section build periodically H/15**** (EVERY 15 MIN )
+you can use also windows task scheduler
