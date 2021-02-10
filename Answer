@@ -1,6 +1,6 @@
 Scripting Answer Exam
-1)2)Please create 2 files in your desktop>new.bat new.text >open cmd>run in cmd  new.bat new.text
-bat file include this script :
+1)2)Please create 2 files in your desktop>new.bat and  new.text >open cmd>run in cmd:  new.bat new.text
+batch file include this script :
 @echo off 
 if "%~z1" == "" ( 
     echo File doesnt existtttt
@@ -12,9 +12,9 @@ if "%~z1" == "" (
 
 3)
 Option 1)
-create  Freesstyle job in jenkins >Below Build section choose Execute Windows batch command>in the command enter new.bat path >add post -build action step with email notification 
+create  Freesstyle job in jenkins >Below Build section choose Execute Windows batch command>in the command enter new.bat path >add post build action step with email notification 
 Option 2)
-plese create bat file with this script new3.bat >you should get failure alert because new3.bat doesnt have permission to call new.bat 
+plese create batch file with this script new3.bat >you should get failure alert because new3.bat doesnt have permission to call new.bat 
 
 @echo off
 
