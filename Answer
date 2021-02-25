@@ -1,4 +1,6 @@
 Scripting Answer Exam
+https://hub.revelian.com/auth/d8b46a6c-7d6e-4813-bc94-1d99a204d8f7
+
 1)2)Please create 2 files in your desktop>new.bat and  new.text >open cmd>run in cmd:  new.bat new.text
 batch file include this script :
 @echo off 
